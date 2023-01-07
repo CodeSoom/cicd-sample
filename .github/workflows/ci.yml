@@ -1,0 +1,14 @@
+name: WEB CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo $GITHUB_BASE_REF
+          echo $GITHUB_HEAD_REF
+          echo $GITHUB_REF
+          echo $GITHUB_REF_NAME
